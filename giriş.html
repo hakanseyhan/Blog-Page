@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="800hA1KepMFO-XbjnZ5xF6KN7a6N1vpiAGX0ZrTisEg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Üye Girişi | SEYHAN Blog</title>
+  <link rel="stylesheet" href="giriş.css" />
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Unicons CSS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link rel="icon" href="Images/logom-photoaidcom-cropped.png" type="favicon" />
+  <!-- Fontawesome Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+</head>
+
+<body>
+
+  <section class="container forms">
+    <div class="main-btn">
+      <a href="index.html">
+        <button><i class="fa-solid fa-circle-left icon"></i>Anasayfaya Dön</button>
+      </a>   
+    </div> 
+    <div class="form login">
+      <div class="form-content">
+        <header>Giriş Yap</header>
+        <form action="http://www.seyhanblog.com/">
+          <div class="field input-field">
+            <input type="email" placeholder="E-Posta Adresiniz" class="input" spellcheck="false">
+            <i class="uil uil-envelope email-icon"></i>
+          </div>
+
+          <div class="field input-field">
+            <input type="password" placeholder="Şifreniz" class="password">
+            <i class='bx bx-hide eye-icon'></i>
+          </div>
+
+          <div class="form-link">
+            <a href="#" class="forgot-pass">Parolanızı mı unuttunuz?</a>
+          </div>
+
+          <div class="field button-field">
+            <button>Giriş Yap</button>
+          </div>
+        </form>
+
+        <div class="form-link">
+          <span>Hesabınız yok mu? <a href="#" class="link signup-link">Şimdi Kayıt Ol</a></span>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="media-options">
+        <a href="#" class="field google">
+          <img src="Images/facebook.png" alt="" class="google-img">
+          <span>Facebook ile Giriş Yapın</span>
+        </a>
+      </div>
+
+      <div class="media-options">
+        <a href="#" class="field google">
+          <img src="Images/google.png" alt="" class="google-img">
+          <span>Google ile Giriş Yapın</span>
+        </a>
+      </div>
+      <div class="media-options">
+        <a href="#" class="field google">
+          <img src="Images/apple.png" alt="" class="google-img">
+          <span>Apple ile Giriş Yapın</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Kayıt Ol Formu -->
+
+    <div class="form signup">
+      <div class="form-content">
+        <header>Kayıt Ol</header>
+        <form action="#">
+          <div class="field input-field">
+            <input type="email" placeholder="E-Posta Adresiniz" class="inputt" spellcheck="false">
+            <i class="uil uil-envelope email-icon"></i>
+          </div>
+
+          <div class="field input-field">
+            <input type="password" placeholder="Şifre Oluştur" class="password">
+            <i class='bx bx-hide eye-icon'></i>
+          </div>
+
+          <div class="field input-field">
+            <input type="password" placeholder="Şifreyi Onayla" class="password">
+            <i class='bx bx-hide eye-icon'></i>
+          </div>
+
+          <div class="field button-field">
+            <button>Kayıt Ol</button>
+          </div>
+        </form>
+
+        <div class="form-link">
+          <span>Zaten hesabınız var mı? <a href="#" class="link login-link">Giriş Yap</a></span>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="media-options">
+        <a href="#" class="field google">
+          <img src="Images/facebook.png" alt="" class="google-img">
+          <span>Facebook ile Kayıt Olun</span>
+        </a>
+      </div>
+
+      <div class="media-options">
+        <a href="#" class="field google">
+          <img src="Images/google.png" alt="" class="google-img">
+          <span>Google ile Kayıt Olun</span>
+        </a>
+      </div>
+      <div class="media-options">
+        <a href="#" class="field google">
+          <img src="Images/apple.png" alt="" class="google-img">
+          <span>Apple ile Kayıt Olun</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    //Login Page
+    const forms = document.querySelector(".forms"),
+      pwShowHide = document.querySelectorAll(".eye-icon"),
+      links = document.querySelectorAll(".link");
+
+    pwShowHide.forEach(eyeIcon => {
+      eyeIcon.addEventListener("click", () => {
+        let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+
+        pwFields.forEach(password => {
+          if (password.type === "password") {
+            password.type = "text";
+            eyeIcon.classList.replace("bx-hide", "bx-show");
+            return;
+          }
+          password.type = "password";
+          eyeIcon.classList.replace("bx-show", "bx-hide");
+        })
+
+      })
+    })
+
+    links.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault(); //form göndermeyi engelliyor
+        forms.classList.toggle("show-signup");
+      })
+    })
+
+    // Mail Vaidation
+    const input = document.querySelector("input"),
+      emailIcon = document.querySelector(".email-icon")
+
+    input.addEventListener("keyup", () => {
+      let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (input.value === "") {
+        emailIcon.classList.replace("uil-check-circle", "uil-envelope");
+        return emailIcon.style.color = "#b4b4b4";
+      }
+      if (input.value.match(pattern)) {
+        emailIcon.classList.replace("uil-envelope", "uil-check-circle");
+        return emailIcon.style.color = "#4bb543"
+      }
+      emailIcon.classList.replace("uil-check-circle", "uil-envelope");
+      emailIcon.style.color = "#de0611"
+    })
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>İletişim | SEYHAN Blog</title>
+  <link rel="stylesheet" href="iletişim.css" />
+  <link rel="icon" href="Images/logom-photoaidcom-cropped.png" type="favicon" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- Fontawesome Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+  <meta name="google-site-verification" content="800hA1KepMFO-XbjnZ5xF6KN7a6N1vpiAGX0ZrTisEg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><i style="margin-right: 10px;" class="fas fa-stroopwafel fa-spin"></i><span
+            class="seyhan">SEYHAN</span>
+          Blog</a>
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="index.html"><i class="fas fa-home icon"></i>Anasayfa</a>
+        </li>
+        <li>
+          <a href="iletişim.html"><i class="fas fa-headset icon"></i>İletişim</a>
+        </li>
+        <div class="cancel-btn">
+          <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+        <ul>
+          <li>
+            <a href="giriş.html"><i class="fas fa-sign-in-alt icon"></i>Giriş Yap</a>
+          </li>
+        </ul>
+      </ul>
+      <div class="media-icons">
+        <a href="http://bit.ly/2Wqwloq" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="http://bit.ly/33idf5C" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://bit.ly/3INv7bF" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://bit.ly/3qISrB4" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+  </div>
+    <div class="toast">
+      <div class="toast-content">
+        <i class="fas fa-solid fa-check check"></i>
+
+        <div class="message">
+          <span class="text text-1">Başarılı</span>
+          <span class="text text-2">Mesajınız Gönderildi</span>
+        </div>
+      </div>
+      <i class="fa-solid fa-xmark close"></i>
+      <div class="progress"></div>
+    </div>
+  </nav>
+
+  <section class="home" id="home">
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <img src="Images/contact.png" alt="content" />
+        </div>
+        <form action="#">
+          <div class="topic"><i style="margin-right: 7px;" class="fa-solid fa-headset head"></i>İletişim</div>
+          <div class="input-box">
+            <input type="text" required />
+            <label>Kullanıcı Adı</label>
+          </div>
+          <div class="input-box">
+            <input type="text" required />
+            <label> E-Posta Adresiniz </label>
+          </div>
+          <div class="message-box">
+            <textarea></textarea>
+            <label>Mesajınız</label>
+          </div>
+          <button>Gönder<i class='bx bxs-send'></i></button><i class='bx bxs-send'></i>
+        </form>
+      </div>
+  </section>
+  <div class="containerr">
+    <span class="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </span>
+
+    <div class="media-iconss">
+      <a href="https://bit.ly/3INv7bF" target="_blank" style="background: #0e82a8">
+        <i class="fa-brands fa-linkedin"></i>
+        <span class="tooltip" style="color: #0e76a8">Linkedin</span>
+      </a>
+      <a href="https://bit.ly/3je1LbP" target="_blank" style="background: #25d366">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip" style="color: #25d366">WhatsApp</span>
+      </a>
+      <a href="https://bit.ly/3qISrB4" target="_blank" style="background: #000">
+        <i class="fa-brands fa-github"></i>
+        <span class="tooltip" style="color: #000">Github</span>
+      </a>
+      <a href="mailto:hknsyn22@gmail.com" target="_blank" style="background: #c71610">
+        <i class="fa-solid fa-envelope"></i>
+        <span class="tooltip" style="color: #c71610">Mail</span>
+      </a>
+      <a href="http://bit.ly/2Wqwloq" target="_blank" style="background: #1da1f2">
+        <i class="fa-brands fa-twitter"></i>
+        <span class="tooltip" style="color: #1da1f2">Twitter</span>
+      </a>
+      <a href="http://bit.ly/33idf5C" target="_blank" style="background: #405DE6">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="tooltip" style="color: #1da1f2">Instagram</span>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Toast Menu JavaScript -->
+  <script>
+    const button = document.querySelector("button"),
+      toast = document.querySelector(".toast")
+    closeIcon = document.querySelector(".close"),
+      progress = document.querySelector(".progress");
+
+    let timer1, timer2;
+
+    button.addEventListener("click", () => {
+      toast.classList.add("active");
+      progress.classList.add("active");
+
+      timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+      }, 5000); //1sn = 1000 milisaniye
+
+      timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+      }, 5300);
+    });
+
+    closeIcon.addEventListener("click", () => {
+      toast.classList.remove("active");
+
+      setTimeout(() => {
+        progress.classList.remove("active");
+      }, 300);
+
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    });
+
+
+    // Social Slider
+    const closeBtn = document.querySelector(".close-btn");
+
+    closeBtn.addEventListener("click", () => {
+      closeBtn.classList.toggle("open");
+    });
+    
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

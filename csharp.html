@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>C# Çalışmalarım | SEYHAN Blog</title>
+  <link rel="stylesheet" href="csharp.css" />
+  <link rel="icon" href="Images/logom-photoaidcom-cropped.png" type="favicon" />
+  <!-- Fontawesome Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+  <meta name="google-site-verification" content="800hA1KepMFO-XbjnZ5xF6KN7a6N1vpiAGX0ZrTisEg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <!-- Fixed Arrow Up -->
+  <div class="scroll-button">
+    <a href="#services"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><i style="margin-right: 10px;" class="fas fa-stroopwafel fa-spin"></i><span
+            class="seyhan">SEYHAN</span>
+          Blog</a>
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="index.html"><i class="fas fa-home icon"></i>Anasayfa</a>
+        </li>
+        <li>
+          <a href="iletişim.html"><i class="fas fa-headset icon"></i>İletişim</a>
+        </li>
+        <div class="cancel-btn">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+        <ol>
+          <li>
+            <a href="giriş.html"><i class="fas fa-sign-in-alt signicon"></i>Giriş Yap</a>
+          </li>
+        </ol>
+      </ul>
+      <!-- Social Media -->
+      <div class="media-icons">
+        <a href="http://bit.ly/2Wqwloq" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="http://bit.ly/33idf5C" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://bit.ly/3INv7bF" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://bit.ly/3qISrB4" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <section class="services" id="services">
+    <div class="content">
+      <div class="title"><span>C# Çalışmalarım</span></div>
+      <div class="boxes">
+        <div class="box">
+          <h5>1-) Klavyeden girilen n kadar sayının aritmetik ortalamasını bulan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+double sayi1, sayi2, ort;
+Console.Write("Birinci Sayıyı Giriniz = ");
+sayi1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("İkinci Sayıyı Giriniz = ");
+sayi2 = Convert.ToDouble(Console.ReadLine());
+ort = (sayi1 + sayi2) / 2;
+Console.Write("Sonuç = ");
+Console.Write(ort);
+Console.ReadLine();
+                  </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>2-) Klavyeden girilen 10 elemanlı bir dizinin elemanlarından negatif olanları ‘Negatif’ adlı bir diziye,
+            pozitif olanları ‘Pozitif’ adlı başka bir diziye atayan ve bu dizileri de ekranda gösteren program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int[] sayi = new int[] { 4, 5, -15, 22, -34, 3, 0, -7, -43, 100 };
+int toplam = 0;
+if (toplam>0)
+{
+Console.WriteLine("Pozitif Sayılar Listeleniyor.. ");
+}
+else if (toplam<0)
+{
+Console.WriteLine("Negatif Sayılar Listeleniyor");
+}   
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>3-) "x"lerden oluşan bir görüntü</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+Console.WriteLine("Sayı giriniz: ");
+int sayi = Convert.ToInt32(Console.ReadLine());
+for (int i = 1; i <= sayi; i++)
+{
+for (int k = 1; k < i; k++)
+{
+Console.Write("x");
+}
+Console.WriteLine();
+}
+      
+for (int i = sayi; i > 0; i--)
+{
+for (int k = 1; k <= i; k++)
+{
+Console.Write("x");
+}
+Console.WriteLine();
+}
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>4-) Bir dizinin en büyük elemanını bulan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+byte[] dizi = { 10, 20, 30, 2, 6, 8, 9 };
+byte enbuyuk, enkucuk;
+enbuyuk = enkucuk = dizi[0];
+for (int i = 1; i < dizi.Length; i++)
+{
+if (enbuyuk < dizi[i])
+enbuyuk = dizi[i];
+if (enkucuk < dizi[i])
+enkucuk = dizi[i];
+}
+Console.WriteLine("En Büyük Eleman {0}, En Küçük Eleman{1}",enbuyuk,enkucuk);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>5-) Klavyeden girilen bir dairenini yarı çapına göre alanını ve çevresini hesaplayan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+double pi = Math.PI;
+double r = double.Parse(Console.ReadLine());
+double alan = pi * r * r;
+double cevre = 2 * pi * r;
+Console.WriteLine("Yarıçap {0},Çevresi {1},Alan {2}", cevre, alan, r);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>6-) Bir hafta, bir ay ve bir yılın kaç saniye olduğunu hesaplayıp ekrana yazan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int saat = 3600; //saniye
+int hafta = saat * 7 * 24;
+long ay = hafta * 4;  //bir ay 28 gün olarak hesaplanmıştır.
+long yil = ay * 12;
+Console.WriteLine("# Bir Ay'ın,Hafta'nın ve Yıl'ın Kaç Saniye Olduğu Aşağıda Belirtilmiştir #");
+Console.Write("\n");
+Console.WriteLine("- Bir Hafta {0} Saniyedir.",hafta);
+Console.WriteLine("- Bir Ay {0} Saniyedir.", ay);
+Console.WriteLine("- Bir Yıl {0} Saniyedir.", yil);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>7-) Klavyeden girilen bir sayının faktöriyelini bulan ve ekrana yazdıran program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+Console.Write("Faktöriyeli Hesaplanacak Sayıyı Giriniz : ");
+int sayi = int.Parse(Console.ReadLine());
+int sonuc = 1;
+while (sayi > 0)
+{
+sonuc *= sayi;
+sayi--;
+}
+Console.WriteLine("İşlemin Sonucu : " + sonuc);
+Console.ReadKey();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>8-) Ekrana bütün karakterleri ve ASCII değerlerini yazan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int x;
+Console.Write("Bir Karakter Giriniz = ");
+x = Console.Read();
+Console.WriteLine("Girdiğiniz Karekterin ASCII Karşılığı = {0}", x);
+Console.ReadKey();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>9-) Bir satranç tahtasının 1.karesine 1 buğday, 2 karesine 1.karenin 2 katı buğday, 3.karesine 2.karenin 2
+            katı buğday konuluyor.Sonuncu kareye kaç buğday konulduğunu bulan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+decimal us, sonuc = 1;
+Console.WriteLine("=================================================");
+us = 64;
+for (int i = 1; i < 64; i++)
+{
+sonuc *= 2;
+      
+}
+Console.WriteLine("Son Karedeki Buğday Sayısı : {0}", sonuc);
+Console.WriteLine("==================================================");
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>10-) 1'den 100 ’e kadar olan sayılardan 8′e, 5′e ve 3′e tam bölünebilen sayıları ekranda görüntüleyen
+            program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+for (int i = 1; i < 100; i++)
+{
+if (i % 8==0 && i % 5==0 && i % 3==0)
+{
+Console.WriteLine("8'e , 5'e ve 3'e Tam Bölünen Sayılar : {0} ; ",i);
+Console.WriteLine(i);
+}
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>11-) Normal olarak bir insanın günde 8 saat uyuduğunu varsayarak ekrandan yaşı girilecek bir kişinin
+            toplam
+            kaç saat / gün / ay / yılını uykuda geçirdiğini bulan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+Console.WriteLine("Lütfen Yaşınızı Giriniz");
+double sayi = double.Parse(Console.ReadLine());
+double gün = sayi * 365 / 3;
+double ay = sayi * 12 / 3;
+double yil = sayi / 3;
+Console.WriteLine("{0} yıl , {1} ay ,{2} gün Uyumuşsunuz!", yil, ay, gün);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>12-) Klavyeden girilen bir sayıyı 2'lik tabana çevirip ekrana yazdıran program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+Console.WriteLine("Bir Sayı Giriniz :");
+int x, s = 0, i = 1;
+x = Convert.ToInt32(Console.ReadLine()); 
+while (x > 0)
+{   
+s = s + ((x % 2) * i);
+x = x / 2;
+      
+}
+Console.WriteLine("Girdiğiniz Sayının İkilik Tabandaki Karşılığı : {0} ",s);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>13-) Klavyeden girilen satır sayısı kadar ekrana sayıları yazan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int sayi;
+Console.WriteLine("Lütfen Bir Sayı Girin : ");
+sayi = int.Parse(Console.ReadLine());
+Console.Write("-----------------------");
+Console.WriteLine();
+int i, j = 0;
+for (i = 1; i <= sayi; i++)
+{
+for (j = 0; j < i; j++)
+{
+Console.Write(i);
+}
+Console.WriteLine();
+}
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>14-) Klavyeden girilen ve bir öğrenci aldığı bir dersten iki sınav olmaktadır. Bu sınavların ortalaması
+            60’in üzerinde ise ‘GEÇTİ’ ; 50 ile 60 arasında ise ‘KALIR’ ; ve 50’ın altında ise ‘UZATILIR’ durumuna
+            gelecektir. Öğrencinin sınavlarını giren ve hesaplayıp ekrana yazdıran program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+Console.WriteLine("Lütfen Notunuzu Girin : ");
+Console.WriteLine("==========================");
+int puan = int.Parse(Console.ReadLine());
+if (puan >= 60)
+{
+Console.Write("Geçtin");
+}
+else if (50 > puan)
+{
+Console.Write("Uzatılır");
+}
+else
+{
+Console.Write("Kaldın");
+}
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>15-) { 1, 10, 20, 5, 50, 85, 105, 113}
+            şeklinde elemanları olan bir dizide, bir basamaklı, iki basamaklı, üç basamaklı olanlarının kaçar adet
+            olduğunu bulan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int[] sayiDizisi = new int[] { 1, 30, 20, 5, 50, 30, 105, 113, 5, 1, 70, 97, 100, 63, 30 };
+int index = 0;
+int toplam = 0;
+Console.WriteLine("| 1, 30, 20, 5, 50, 30, 105, 113, 5, 1, 70, 97, 100, 63, 30 |");
+Console.Write("-----------------------------------------");
+Console.WriteLine("\n");
+Console.WriteLine("Yukarıdaki Sayılardan Birtanesini Giriniz : ");
+if (toplam<=15)
+{
+int sayıDizisi = int.Parse(Console.ReadLine());
+Console.WriteLine("Girdiğiniz Sayıdan {0} Adet Vardır.",toplam);
+}
+else if (index<=15)
+{
+int sayıDizisi = int.Parse(Console.ReadLine());
+}
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>16-) Klavyeden girilen bir sayının mükemmel sayı olup olmadığını bulan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+Console.WriteLine("Sayı giriniz : ");
+int sayi = Convert.ToInt32(Console.ReadLine());
+int toplam = 0;
+for (int i = 1; i < sayi; i++) 
+{
+if (sayi % i == 0)
+{
+toplam += i;
+}
+}
+if (toplam == sayi)
+{
+Console.WriteLine(sayi + " Sayısı Mükemmel Sayıdır.");
+}
+else
+{
+Console.WriteLine(sayi + " Sayısı Mükemmel Sayı Değildir.");
+}
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>17-) Klavyeden girilen 10 adet sayıyı bir diziye atayan ve dizinin ortalamasını bulan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+double toplam = 0, ortalama = 0;
+double[] sayilar = new double[10];
+for (int i = 0; i < 10; i++)
+{
+Console.Write(i + 1 + ".Sayıyı Giriniz : ");
+sayilar[i] = Convert.ToDouble(Console.ReadLine());
+toplam += sayilar[i];
+}
+ortalama = toplam / sayilar.Length;
+Console.WriteLine("Toplam : " + toplam);
+Console.WriteLine("Ortalama : " + ortalama);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>18-) Klavyeden girilen 10 adet sayıyı bir diziye atayan ve dizi ortalamasından büyük olanları ekrana
+            yazdıran program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int[] dizi = new int[10];
+for (int i = 0; i < 10; i++) 
+{ 
+Console.WriteLine((i + 1) + " .Sayıyı Gir: "); 1
+dizi[i] = Int32.Parse(Console.ReadLine());
+}
+for (int i = 0; i < 10; i++) 
+{
+for (int j = i + 1; j < 10; j++) 
+{ 
+if (dizi[i] > dizi[j])   
+{
+int sayi = dizi[i];
+dizi[i] = dizi[j];
+dizi[j] = sayi;
+}
+                      
+}
+      
+}
+Console.WriteLine("Dizinin Küçükten Büyüğe Sıralanmış Hali ; ");
+for (int i = 0; i < 10; i++) 
+{ 
+Console.Write("{0} , ",dizi[i]); 
+}
+Console.WriteLine("Finished!");
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>19-) Klavyeden girilen bir sayının, { 1, 30, 20, 5, 50, 30, 105, 113, 50, 30, 1, 120, 5 }
+            şeklinde elemanları olan bir dizide kaç defa olduğu ve hangi indis numaralarına sahip olduğunu bulan program
+          </h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int[] sayilar = { 1, 30, 20, 5, 50, 30, 1, 105, 113, 50, 30, 1, 120, 5, 1, 1 };
+int sayi, kontrol = 0;
+Console.Write("Bir Sayı Giriniz : ");
+sayi = Convert.ToInt32(Console.ReadLine());
+for (int i = 0; i < sayilar.Length; i++)
+{
+      
+if (sayi == sayilar[i])
+{
+kontrol++;
+      
+}
+}
+if (kontrol == 0)
+{
+Console.WriteLine("Sayı Dizi İçinde Bulunamadı...");
+}
+else
+{
+Console.WriteLine("Bu Sayı Dizide {0} Adet Var", kontrol);
+Console.WriteLine("Girilen Sayının İndis Numarası : {0}");
+}
+Console.ReadLine(); 
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>20-) Klavyeden girilen bir sayıyı, { 1, 30, 20, 5, 50, 30, 105, 113}
+            şeklinde elemanları olan bir dizide arayan ve bulduktan sonra bunu 100 sayısı ile değiştiren program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int[] dizi = { 1, 30, 20, 5, 50, 30, 105, 113 };
+Console.WriteLine("1, 30, 20, 5, 50, 30, 105, 113");
+Console.WriteLine("Değiştirmek İstediğin Sayıyı Gir : "); 
+int sayi3 = int.Parse(Console.ReadLine()); 
+for (int i = 0; i < dizi.Length; i++) 
+{ 
+if (dizi[i] == sayi3) 
+{ 
+dizi[i] = 100;
+} 
+}
+Console.WriteLine("Sayı 100 ile Değiştikten Sonra :");
+for (int i = 0; i < dizi.Length; i++) 
+{
+Console.WriteLine(dizi[i]); 
+}
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>21-) Klavyeden girilen iki sayıyı (*) çarpma operatörü kullanmadan çarpan ve ekrana yazdıran program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu:</div>
+                <textarea id="HTMLBox" readonly>
+int sonuc = 0;
+Console.Write("Birinci Sayıyı Giriniz : ");
+int sayi1 = int.Parse(Console.ReadLine());
+Console.Write("İkinci Sayıyı Giriniz : ");
+int sayi2 = int.Parse(Console.ReadLine());
+for (int i = 1; i <= sayi2; i++)
+{
+sonuc += sayi1;
+}
+Console.WriteLine(("Girdiğiniz İki Sayının Çarpımı : ") + sonuc);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>22-) 100 tane kapı var. Bu kapılar 1'den 100'e kadar numaralandırılmış. İlk olarak kapıların hepsi
+            kilitlidir. Elimizde 1'den 20'ye kadar numaralandırılmış 20 tane anahtar var. Bir kapının numarası bir
+            anahtarın numarasına tam bölünüyorsa o anahtar o kapıyı açabiliyor (ya da kilitleyebiliyor!). 1 numaralı
+            anahtardan başlayarak her anahtar için kapıları dolaşılıyor. Anahtar ile kapı açılıyor ya da
+            kilitleniyor. Yani kapı açıksa kilitleniyor kapı kilitli ise kapı açılıyor. 20.turdan sonra, yani son
+            anahtarın kullanılmasından sonra hangi kapılar açık hangi kapılar kilitlidir? Açık olan kapıların
+            numaralarını ekrana yazdıran program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+Boolean[] kapilar = new Boolean[100];
+for (int i = 1; i <= 20; i++)
+{
+for (int j = 0; j < kapilar.Length; j++)
+{
+if ((j+1)%i==0)
+kapilar[j] = !(kapilar[j]);
+                          
+}
+      
+}
+string acikkapilar = "";
+string kapalikapılar = "";
+for (int i = 0; i < kapilar.Length; i++)
+{
+if (kapilar[i])
+acikkapilar = acikkapilar + "," + (i + 1).ToString();   
+                      
+else
+                      
+kapalikapılar = kapalikapılar + "," + (i + 1).ToString();
+                     
+}
+Console.WriteLine("Açık Kapılar\n{0}", acikkapilar);
+Console.WriteLine("Kapalı Kapılar\n{0}", kapalikapılar);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>23-) Girilen 5 sayıya göre ve basılan tuşa göre işlemleri yapan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int sayi, toplam = 0, islem; 
+string devam;
+int bolunen = new int[5];
+string menu = "1- Toplamlarını Göster \n 2- En Büyüğünü Göster \n 3-En Küçük Toplamlarını Göster \n 4- Bölünenleri Göster \n 5- Çıkış";
+for (int i = 1; i < 5; i++)
+{
+Console.Write((i) + ".Sayıyı Giriniz");
+sayi = Convert.ToInt32(Console.ReadLine());
+toplam += sayi;
+if (sayi % 2 == 0)
+{
+bolunen[i] = sayi;
+}
+}
+while (true)
+{
+while (true)
+{
+Console.WriteLine("<<<<<<<<<<<<< İŞLEM MENÜSÜ >>>>>>>>>>>>");
+Console.WriteLine(menu);
+islem = Convert.ToInt32(Console.ReadLine());
+if (islem<0 || islem >5)
+{
+Console.WriteLine("Girdiğiniz Değerde Bir Seçenek Yok");
+}
+if (islem==1)
+{
+.WriteLine("Girilen Sayıları Toplamı : {0}", toplam);
+break;
+}
+else if (islem == 2 )
+{
+break;
+}
+else if (islem == 3)
+{
+      
+}
+else if (islem == 4)
+{
+Console.Clear();
+Console.WriteLine("<<<<<<<<<<< İKİYE BÖLÜNEN SAYILAR >>>>>>>>>>>");
+foreach (int i in bolunen)
+{
+Console.WriteLine(i);
+      
+}
+break;
+}
+else
+{
+break;
+}
+      
+      
+}
+Console.Write("Devam Etmek İçin (e) Çıkmak İçin (q)'a Basınız.");
+devam = Console.ReadLine();
+devam.ToLower();
+if (devam == "e")
+{
+Console.Clear();
+Console.WriteLine(menu);
+      
+}
+else
+{
+break;
+}
+                </textarea>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="box">
+          <h5>24-) Sigmud Fonksiyonu</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int sayi = int.Parse(Console.ReadLine());
+int sonuc;
+if (sayi < 0)
+sonuc = -1;
+else if (sayi > 0)
+sonuc = 1;
+else sonuc = 0;
+Console.WriteLine("Girilen Sayı = {0},Sigmud Fonksiyon Sonuç = {1}", sayi,sonuc);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>25- Küçük çaplı hesap makinesi </h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+int sayi1 = 6;
+int sayi2 = 5;
+int sonuc=0;
+Console.WriteLine("Çarpma İşlemi İçin : 1 , Toplama İşlemi İçin : 2 , Çıkarma İşlemi İçin : 3 Butonuna Basınız,");
+int x = int.Parse(Console.ReadLine());
+if (x == 1)
+{
+sonuc = (sayi1*sayi2);
+Console.WriteLine("{0}", sonuc);
+      
+}
+else if(x == 2)
+{
+sonuc=(sayi1 + sayi2);
+Console.WriteLine("{0}", sonuc);
+      
+}
+else if (x==3)
+{
+sonuc = (sayi1 - sayi2);
+Console.WriteLine("{0}", sonuc);
+}
+else
+{
+Console.WriteLine("Lütfen Geçerli Bir Butona Basınız");
+}
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="box">
+          <h5>26-) Klavyeden girilen bir dairenin yarı çapına göre, alanını ve çevresini hesaplayan program</h5>
+          <div class="topic">
+            <div class="text-boxes">
+              <div class="text-box HTMLBox">
+                <div class="topic">C# Kodu</div>
+                <textarea id="HTMLBox" readonly>
+double pi = Math.PI;
+double r = double.Parse(Console.ReadLine());
+double alan = pi * r * r;
+double cevre = 2 * pi * r;
+Console.WriteLine("Yarıçap {0},Çevresi {1},Alan {2}", cevre, alan, r);
+Console.ReadLine();
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </section>
+  <div class="comment-box">
+    <h2><i class="fa-solid fa-comments icon"></i>Yorumlar</h2>
+    <form action="#">
+      <input type="text" name="full_name" placeholder="Kullanıcı Adınız" required>
+      <input type="email" name="email" placeholder="E-Posta Adresiniz" required>
+      <textarea name="comment" placeholder="Yorumunu Yaz" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fas fa-stroopwafel fa-spin"></i>
+          <span class="logo_name"> <span class="seyhan">SEYHAN</span> Blog</span>
+        </div>
+        <!-- <div class="media-icons">
+          <a href="http://bit.ly/39OWkKf" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="http://bit.ly/2Wqwloq" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://bit.ly/3qISrB4" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="http://bit.ly/33idf5C" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://bit.ly/3INv7bF" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div> -->
+      </div>
+
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Sayfa Erişimi</li>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="iletişim.html">Bize Ulaşın</a></li>
+          <li><a href="#">Hakkımızda</a></li>
+          <li><a href="#">Şimdi Başlayın</a></li>
+          <li><a href="#">Bağışta Bulun </a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Servisler</li>
+          <li><a href="#">Uygulama Tasarımı</a></li>
+          <li><a href="#">Web Tasarımı</a></li>
+          <li><a href="#">Logo Tasarımı</a></li>
+          <li><a href="#">Banner Tasarımı</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Hesap</li>
+          <li><a href="#">Profil</a></li>
+          <li><a href="#">Hesabım</a></li>
+          <li><a href="#">Blog Sayfam</a></li>
+          <li><a href="#">Galeri</a></li>
+          <li><a href="#">Künye</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">İçerikler</li>
+          <li><a href="htmlnedir.html">HTML & CSS ve JavaScript</a></li>
+          <li><a href="csharp.html">C# Çalışmalarım</a></li>
+          <li><a href="bilprog.html">Bilgisayar Programcılığı</a></li>
+          <li><a href="bildonanım.html">Bilgisayar Donanımı</a></li>
+          <li><a href="böltavsiye.html">Bölüm Tavsiyeleri </a></li>
+          <li><a href="yazılım.html">Yazılımı Nasıl Öğrenirim?</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2022 |<a href="index.html"> SEYHAN Blog</a>Tüm Hakları Saklıdır.</span>
+        <span class="policy_terms">
+          <a href="#">Gizlilik Politikası</a>
+          <a href="#">Şartlar ve Koşullar</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"> </script>
+</body>
+
+</html>
